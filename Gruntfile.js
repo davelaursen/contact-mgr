@@ -4,6 +4,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-protractor-runner');
+  grunt.loadNpmTasks('grunt-express-server');
 
   grunt.initConfig({
     karma: {
@@ -19,12 +21,33 @@ module.exports = function (grunt) {
       }
     },
 
+    protractor: {
+      options: {
+        configFile: "protractor_conf.js",
+        noColor: false,
+        args: { }
+      },
+      e2e: {
+        options: {
+          keepAlive: false
+        }
+      }
+    },
+
+    express: {
+      app: {
+        options: {
+          script: 'app.js'
+        }
+      }
+    },
+
     jshint: {
       files: [
         'Gruntfile.js',
         'karma.conf.js',
         'app/scripts/**/*.js',
-        'app/test/**/*.js'
+        'test/**/*.js'
       ],
       options: {
         strict: true,
@@ -39,7 +62,7 @@ module.exports = function (grunt) {
         'Gruntfile.js',
         'karma.conf.js',
         'app/scripts/**/*.js',
-        'app/test/**/*.js'
+        'test/**/*.js'
       ],
       tasks: [
         'karma:continuous:run',
@@ -49,6 +72,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('test', ['karma:unit']);
+  grunt.registerTask('e2e', ['express:app','protractor:e2e']);
   grunt.registerTask('check', ['karma:continuous:start','watch']);
 
 };
