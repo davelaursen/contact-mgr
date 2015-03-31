@@ -3,9 +3,9 @@
 
   var contact, request = require('request');
 
-  request('http://127.0.0.1:3000/data', function (error, response, body) {
+  request('http://127.0.0.1:3000/data/1', function (error, response, body) {
     if (!error && response.statusCode == 200) {
-      contact = JSON.parse(body)[0];
+      contact = JSON.parse(body);
     }
   });
 
