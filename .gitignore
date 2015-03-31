@@ -1,0 +1,10 @@
+.idea/
+*.iml
+node_modules/
+bower_components/
+*.log
+*.heapsnapshot
+.metadata
+.settings
+.project
+*coverage.*

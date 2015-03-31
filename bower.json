@@ -1,0 +1,23 @@
+{
+  "name": "contact-list-mgr",
+  "version": "0.0.1",
+  "authors": [
+    "Dave Laursen (davelaursen@yahoo.com)"
+  ],
+  "description": "AngularJS frontend for contact list management system",
+  "main": "app.js",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.3.14",
+    "angular-route": "1.3.14",
+    "angular-mocks": "1.3.14"
+  }
+}

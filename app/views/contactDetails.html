@@ -1,0 +1,28 @@
+<div>
+    <div class='view-group'>
+        <div class="view-label"></div>
+        <div class="view-element header"><h2>{{contact.first_name}} {{contact.last_name}}</h2></div>
+    </div>
+
+    <div class='view-group'>
+        <div class="view-label">Email :</div>
+        <div class="view-element">{{contact.email}}</div>
+    </div>
+
+    <div class='view-group'>
+        <div class="view-label">Phone :</div>
+        <div class="view-element">{{contact.phone}}</div>
+    </div>
+
+    <div class='view-group'>
+        <div class="view-label">Address :</div>
+        <div class="view-element">
+            {{contact.address}}<br>{{contact.city}}, {{contact.state}} {{contact.zip}}
+        </div>
+    </div>
+
+    <div class='view-group'>
+        <div class="view-label">Joined :</div>
+        <div class="view-element">{{contact.join_date}}</div>
+    </div>
+</div>

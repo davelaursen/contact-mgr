@@ -1,0 +1,24 @@
+{
+  "name": "contact-list-mgr",
+  "version": "0.0.1",
+  "description": "frontend for contact list management system",
+  "main": "app.js",
+  "dependencies": {
+    "express": "~4.12.2",
+    "karma": "0.12.16",
+    "karma-jasmine": "0.1.5",
+    "karma-phantomjs-launcher": "0.1.4"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "contributors": [
+    {
+      "name": "Dave Laursen",
+      "email": "davelaursen@yahoo.com"
+    }
+  ],
+  "devDependencies": {
+    "karma-ng-html2js-preprocessor": "^0.1.2"
+  }
+}

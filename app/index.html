@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="contactMgr">
+<head>
+    <base href="/">
+    <title>Contact List Manager</title>
+
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Oswald:300,400,700'>
+    <link rel="stylesheet" href="styles/reset.css"/>
+    <link rel="stylesheet" href="styles/app.css"/>
+</head>
+<body>
+
+    <div class="content" ng-view></div>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/configuration.js"></script>
+    <script src="scripts/controllers/contactControllers.js"></script>
+    <script src="scripts/directives/coreDirectives.js"></script>
+    <script src="scripts/directives/contactDirectives.js"></script>
+    <script src="scripts/services/contactServices.js"></script>
+</body>
+</html>

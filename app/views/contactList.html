@@ -1,0 +1,37 @@
+<div>
+    <div class="contact-filters">
+        <input ng-model="filterText" ng-change="filter()" placeholder="search by name">
+        <select ng-model="filterState" ng-change="filter()" ng-options="state as state for state in states">
+            <option value="">filter by state</option>
+        </select>
+        <div class="per-page">
+            <span>items per page:</span>
+            <select ng-model="itemsPerPage">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+    </div>
+
+    <ul class="contact-list">
+        <li>
+            <span class="header">
+                <span class="col1"><h2>Name</h2></span>
+                <span class="col2"><h2>Phone</h2></span>
+                <span class="col3"><h2>Email</h2></span>
+                <span class="col4"><h2>State</h2></span>
+            </span>
+        </li>
+        <li ng-repeat="contact in pagedContacts">
+            <a href class="contact" ng-click="onSelected()(contact.id)">
+                <span class="col1">{{contact.last_name}}, {{contact.first_name}}</span>
+                <span class="col2">{{contact.phone}}</span>
+                <span class="col3">{{contact.email}}</span>
+                <span class="col4">{{contact.state}}</span>
+            </a>
+        </li>
+    </ul>
+
+    <cm-pagination current-page="currentPage" items-per-page="itemsPerPage" items="filteredContacts"></cm-pagination>
+</div>
