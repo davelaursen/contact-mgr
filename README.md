@@ -1,5 +1,3 @@
 # contact-mgr
 
-## TODO:
-
-* Add Protractor tests
+A simple, unbranded, read-only contact list manager. Focuses on Angular implementation - data is static and styling is minimal.
